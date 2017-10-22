@@ -1,0 +1,36 @@
+{{! USER CONFIGURATION OF THIS PAGE IS NOT REQUIRED }}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<title>{{meta_title}}</title>
+	<meta name="description" content="{{meta_description}}" />
+
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="alternate" type="application/rss+xml" href="{{@blog.url}}/rss/">
+	<link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+	<link rel="prefetch" href="{{@blog.url}}">
+
+	<link rel="stylesheet" type="text/css" href="{{asset "css/libs.min.css"}}" />
+	<link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
+
+	<meta property="og:title" content="{{meta_title}}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="{{@blog.url}}{{url absolute="true"}}" />
+
+	{{ghost_head}}
+</head>
+<body class="{{body_class}}">
+
+	{{{body}}}
+	
+	{{ghost_foot}}
+	{{! JAVASCRIPT }}
+	<script async type="text/javascript" src="{{asset "js/main.bundle.min.js"}}"></script>
+</body>
+</html>
