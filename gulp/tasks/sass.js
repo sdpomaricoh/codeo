@@ -2,6 +2,7 @@
  * import dependencies
  */
 var autoprefixer = require('gulp-autoprefixer'),
+	browserSync = require('browser-sync').create(),
 	gulp = require('gulp'),
 	plumber = require('gulp-plumber'), 
 	sass = require('gulp-sass'),
@@ -22,6 +23,7 @@ module.exports = function() {
 			}))
 			.on('error', sass.logError)
 			.pipe(sourcemaps.write('./'))
-			.pipe(gulp.dest('./assets/css'));
+			.pipe(gulp.dest('./assets/css'))
+			.pipe(browserSync.stream());
 	});
 };
