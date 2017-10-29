@@ -1,0 +1,50 @@
+@import 'core/typography';
+@import 'core/colors';
+
+@import 'layout/header';
+
+body{
+    background-color: $primary-color;
+    color: $primary-text;
+}
+
+.pageBorder {
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
+    .topBorder, .rightBorder, .bottomBorder, .leftBorder {
+        background: #ffffff !important;
+    	padding: 12px;
+ 		position: fixed;
+    }
+    .topBorder{
+    	top: 0;
+    	width: 100%;
+    }
+    .bottomBorder{
+    	bottom: 0;
+    	width: 100%;
+    }
+    .leftBorder{
+    	height: 100%;
+        left: 0;
+    }
+    .rightBorder{
+    	height: 100%;
+        right: 0;
+    }
+}
+
+.wrapper{
+	margin: 24px;
+	position: relative;
+}
+
+
+
+
+
