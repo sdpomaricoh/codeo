@@ -6,13 +6,11 @@ var browserSync = require('browser-sync').create(),
  */
 var gulp = require('./gulp')([
 	'analyze',
-	'css',
-	'js',
 	'sass',
-	'scripts',
+	'browserify',
 ]);
 
-gulp.task('build',['sass','scripts','css','js']);
+gulp.task('build',['sass','analyze','browserify']);
 
 gulp.task('watch',['build'], function(){
 	browserSync.init({
@@ -20,9 +18,7 @@ gulp.task('watch',['build'], function(){
 	});
 	gulp.watch('**/*.hbs').on('change', reload);
 	gulp.watch('./src/sass/**/*.scss',['sass']).on('change', reload);
-	gulp.watch('./src/vendors/js/*.js',['scripts']).on('change', reload);
-	gulp.watch('./src/vendors/css/*.css',['css']).on('change', reload);
-	gulp.watch('./src/js/**/*.js',['js']).on('change', reload);
+	gulp.watch('./src/js/**/*.js',['browserify']).on('change', reload);
 });
 
 gulp.task('default',['watch']);

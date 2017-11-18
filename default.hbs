@@ -14,32 +14,22 @@
 	<link rel="alternate" type="application/rss+xml" href="{{@blog.url}}/rss/">
 	<link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 	<link rel="prefetch" href="{{@blog.url}}">
-
-	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Open+Sans:800|PT+Sans" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet"> 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<link rel="stylesheet" type="text/css" href="{{asset "css/libs.min.css"}}" />
 	<link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
 
 	<meta property="og:title" content="{{meta_title}}" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="{{@blog.url}}{{url absolute="true"}}" />
 	{{#if @blog.cover_image}}<meta property="og:image" content="{{@blog.cover_image}}" />{{/if}}
-
 	{{ghost_head}}
 </head>
 <body class="{{body_class}}">
-	<div class="pageBorder" data-wow-duration="0.7s" data-wow-delay="0.2s">
-		<div class="topBorder wow fadeInDown animated"></div>
-		<div class="bottomBorder wow fadeInUp animated"></div>
-		<div class="rightBorder wow fadeInRight animated"></div>
-		<div class="leftBorder wow fadeInLeft animated"></div>
-	</div>
 	{{{body}}}
 
 	{{ghost_foot}}
 	{{! JAVASCRIPT }}
-	<script async type="text/javascript" src="{{asset "js/vendors.bundle.min.js"}}"></script>
-	<script async type="text/javascript" src="{{asset "js/main.js"}}"></script>
+	<script async type="text/javascript" src="{{asset "js/main.bundle.min.js"}}"></script>
 </body>
 </html>
