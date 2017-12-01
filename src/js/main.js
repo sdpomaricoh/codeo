@@ -1,18 +1,8 @@
- var typed = new Typed('#typing', {
-    strings: ['imagination', 'inspiration', 'talent', 'creativity'],
-    typeSpeed: 100,
-    backSpeed: 0,
-    fadeOut: true,
-    loop: false,
-    cursorChar: '_'
-});
+const Menu = require('./menu')
+const Hero = require('./hero')
+const $ = require('jquery')
 
-
- jQuery(document).ready(function($){
-
- 	$('.toggle').click(function(){
- 		$(this).toggleClass('active');
- 		$('.menuFullWidth').toggleClass('active');
- 	});
-
- });
+$(document).ready(() => {
+	Menu()
+	Hero()
+})

@@ -1,17 +1,19 @@
 {{!< default}}
-<div class="wrapper">
+<main role="main">
 	{{> header }}
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="typingText">
-					<p>Clear thinking at the wrong moment can stifle 
-						<span>
-							<span id="typing">creativity</span>
-						</div>
-					</p>
-				</div>
-			</div> 
+	<div id="hero" style="background-image: url({{@blog.cover_image}})">
+		<div class="typingText">
+			<p>
+				Para crear el futuro es necesario <br><span id="typing">creer</span>
+			</p>
 		</div>
 	</div>
-</div>
+	<div class="container">
+		<section class="feed">
+			{{#foreach posts}}
+				{{> post }}
+			{{/foreach}}
+		</section>
+	</div>
+	{{> footer }}
+</main>

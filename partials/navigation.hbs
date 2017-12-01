@@ -1,5 +1,7 @@
 <ul>
 	{{#foreach navigation}}
-		<li role="presentation"><a class="{{#if current}}current{{/if}}" href="{{url absolute="true"}}">{{label}}</a></li>
+		<li role="presentation" class="menu-item">
+			<a class="{{#if current}}current{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
+		</li>
 	{{/foreach}}
-</ul>
+</ul>	

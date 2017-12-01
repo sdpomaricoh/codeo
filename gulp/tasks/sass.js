@@ -1,23 +1,25 @@
 /**
  * import dependencies
  */
-var autoprefixer = require('gulp-autoprefixer'),
+const autoprefixer = require('gulp-autoprefixer'),
 	browserSync = require('browser-sync').create(),
 	gulp = require('gulp'),
 	postcss = require('gulp-postcss'),
 	plumber = require('gulp-plumber'), 
 	sass = require('gulp-sass'),
-	sourcemaps = require('gulp-sourcemaps');
+	sourcemaps = require('gulp-sourcemaps')
 
 /**
  * Compile SASS on CSS minified with sourcemap  
  * @return {Object} [gulp task]
  */
 module.exports = function() {
-	var processor = [
+
+	const processor = [
 		autoprefixer
-	];	      
-	gulp.task('sass', function(){
+	]
+
+	gulp.task('sass', () => {
 		return gulp.src('./src/sass/**/*.scss')
 			.pipe(plumber())
 			.pipe(sourcemaps.init())
@@ -28,6 +30,6 @@ module.exports = function() {
 			.pipe(postcss(processor))
 			.pipe(sourcemaps.write('./'))
 			.pipe(gulp.dest('./assets/css'))
-			.pipe(browserSync.stream());
-	});
-};
+			.pipe(browserSync.stream())
+	})
+}

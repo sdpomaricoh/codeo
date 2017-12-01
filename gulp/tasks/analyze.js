@@ -1,16 +1,16 @@
 /**
  * import dependencies
  */
-var eslint = require('gulp-eslint'),
+const eslint = require('gulp-eslint'),
 	gulp = require('gulp'),
-	notify = require('gulp-notify');
+	notify = require('gulp-notify')
 
 /**
  * validate code on eslint validator
  * @return {Object} [gulp task]
  */
-module.exports = function() {	
-	gulp.task('analyze', function(){
+module.exports = () => {	
+	gulp.task('analyze', () => {
 		return gulp.src([
 			'src/**/*.js',
 			'gulp/**/*.js'
@@ -21,6 +21,6 @@ module.exports = function() {
 				title: 'Validation', 
 				message: 'You have errors in your code',
 				sound: true 
-			}));
-	});
-};
+			}))
+	})
+}

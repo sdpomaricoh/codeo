@@ -1,0 +1,26 @@
+<article class="single">
+	{{#if feature_image}}
+	<div class="header">
+		<div style="background-image: url('{{img_url feature_image}}')" class="imgHeader"></div>
+		<a href="{{url}}">
+			<div class="hover">
+				<i class="ion-ios-eye-outline"></i>
+			</div>
+		</a>
+	</div>
+	{{/if}}
+	<div class="content">
+		<div class="tags">
+			{{tags separator=","}}
+		</div>
+		<h3 class="postTitle">
+			<a href="{{url}}">{{{title}}}</a>
+		</h3>
+		<section class="post-excerpt">
+			<p>{{excerpt words="20"}}...</p>
+		</section>
+	</div>
+	<a href="{{url}}" class="date">
+		{{date format="MMMM DD, YYYY"}}
+	</a>
+</article>

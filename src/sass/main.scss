@@ -1,50 +1,39 @@
-@import 'core/typography';
-@import 'core/colors';
+/*!
+ * Codeo v1.0.0
+ * Copyright 2017 Sergio Pomárico Hernández
+ * Copyright 2017 codeo.
+ * Licensed under MIT (https://github.com/sdpomarico/codeo/LICENSE)
+ */
 
-@import 'layout/header';
+@import 'bootstrap/bootstrap';
+@import 'base';
+@import 'layout';
+@import 'modules';
+@import 'state';
+@import 'responsive';
 
-body{
-    background-color: $primary-color;
-    color: $primary-text;
+@media (max-width: 1024px){
+	.feed{
+		.single, .single:nth-child(4){
+			flex: 0 0 100%;
+			margin-bottom: 5%;
+			padding: 1rem;
+			.date{
+				width: 92%;
+			}
+		}
+	}
 }
 
-.pageBorder {
-    height: 100%;
-    left: 0;
-    pointer-events: none;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999999;
-    .topBorder, .rightBorder, .bottomBorder, .leftBorder {
-        background: #ffffff !important;
-    	padding: 12px;
- 		position: fixed;
-    }
-    .topBorder{
-    	top: 0;
-    	width: 100%;
-    }
-    .bottomBorder{
-    	bottom: 0;
-    	width: 100%;
-    }
-    .leftBorder{
-    	height: 100%;
-        left: 0;
-    }
-    .rightBorder{
-    	height: 100%;
-        right: 0;
-    }
+@include media-breakpoint-only(xs) {
+	footer{
+		text-align: center;
+		.footer-social{
+			margin-top: 1rem;
+			text-align: center;
+			li{
+				padding: 0.1rem 0.5rem;
+			}
+		}
+	}
 }
-
-.wrapper{
-	margin: 24px;
-	position: relative;
-}
-
-
-
-
-

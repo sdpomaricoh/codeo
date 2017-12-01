@@ -1,0 +1,103 @@
+/*=========================================================
+                    Color palette
+=========================================================*/
+
+$primary-color:       #f5f5f5;
+$dark-primary-color:  #1D1D1D;
+$light-primary-color: #FFFFFF;
+$highlight-color:     #34d5cb;
+
+$primary-text:        #555;
+$secondary-text:      #2B2B2B;
+
+$danger:              #e64a19;
+$warning:             #ffa000;
+$success:             #4caf50;
+
+body{
+	background-color: $primary-color;
+	color: rgb(85, 85, 85);
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+}
+
+p{
+	line-height: 1.5rem;
+	padding: 0;
+	position: relative;
+}
+
+a{
+	color: $primary-text;
+	display: inline-block;
+	text-decoration: none;
+	transition: all 0.320s ease 0s; 
+	&:hover{
+		color: $secondary-text;
+		text-decoration: none;
+	}
+}
+
+img{
+	max-width: 100%;
+	display: block;
+}
+
+@keyframes animate-border-top-right{
+	0%{
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+		border-right-color: transparent;
+		border-top-color: $light-primary-color;
+		height: 0;
+		width: 0;
+	}
+	50%{
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+		border-right-color: transparent;
+		border-top-color: $light-primary-color;
+		height: 0;
+		width: 100%;
+	}
+	100%{
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+		border-right-color: $light-primary-color;
+		border-top-color: $light-primary-color;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+@keyframes animate-border-left-bottom{
+	0%{
+		border-bottom-color: transparent;
+		border-left-color: $light-primary-color;
+		border-right-color: transparent;
+		border-top-color: transparent;
+		height: 0;
+		width: 0;
+	}
+	50%{
+		border-bottom-color: $light-primary-color;
+		border-left-color: $light-primary-color;
+		border-right-color: transparent;
+		border-top-color: transparent;
+		height: 100%;
+		width: 0;
+	}
+	100%{
+		border-bottom-color: $light-primary-color;
+		border-left-color: $light-primary-color;
+		border-right-color: transparent;
+		border-top-color: transparent;
+		height: 100%;
+		width: 100%;
+	}
+}
