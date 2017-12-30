@@ -9,7 +9,7 @@ const mainHero = () =>{
 		Height: function() {
 			if ($('#hero').length > 0 ) {
 				const height = $(window).height()
-				$('#hero').css('height', height * 0.85 + 'px')
+				$('#hero').css('height', height * 0.9 + 'px')
 			}
 		},
 		Scroll: function() {

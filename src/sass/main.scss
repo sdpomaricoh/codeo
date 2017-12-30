@@ -19,7 +19,12 @@
 			margin-bottom: 5%;
 			padding: 1rem;
 			.date{
-				width: 92%;
+				text-align: center;
+			}
+		}
+		.single{
+			&:first-child{
+				padding: 1rem;
 			}
 		}
 	}
@@ -33,6 +38,26 @@
 			text-align: center;
 			li{
 				padding: 0.1rem 0.5rem;
+			}
+		}
+	}
+	.menu{
+		.menu-footer{
+			bottom: 5%;
+			.copyright{
+				padding-bottom: 0;
+				text-align: center;
+			}
+			.social{
+				padding: 0.75rem 0;
+				text-align: center;
+				ul{
+					display: flex;
+					padding-left:0;
+					li{
+						width: 24%;
+					}
+				}
 			}
 		}
 	}
