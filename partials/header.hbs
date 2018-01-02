@@ -3,11 +3,12 @@
 		<div class="mainHeader">
 			<div class="logo">
 				<a itemprop="url" href="{{@blog.url}}" class="logo-img">
-					<img src="{{@blog.logo}}" alt="{{@blog.title}}">
+					{{!-- <img src="{{@blog.logo}}" alt="{{@blog.title}}"> --}}
+					{{> logo }}
 				</a> 
 			</div>
 			<div class="menuIcon">
-				<div class="menuIcon-toggle">
+				<div class="menuIcon-toggle {{#post}}is-post{{/post}}">
 					<span></span>
 					<span></span>
 					<span></span>

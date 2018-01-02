@@ -13,13 +13,18 @@ const mainHero = () =>{
 			}
 		},
 		Scroll: function() {
-			const body = $('body'), 
-				hero = body.find('#hero')
-		
-			$(window).scroll(() => {
-				const heroHeight = hero.height(), top = $(document).scrollTop()
-				hero.css('opacity', (1 - top/heroHeight*1))
-			})
+			const hero = $('#hero'), postHeader = $('.postHeader')
+			if (hero.length !== 0) {
+				$(window).scroll(() => {
+					const heroHeight = hero.height(), top = $(document).scrollTop()
+					hero.css('opacity', (1 - top/heroHeight*1))
+				})
+			} else if (postHeader.length !== 0) { 
+				$(window).scroll(() => {
+					const headerHeight = postHeader.height(), top = $(document).scrollTop()
+					postHeader.css('opacity', (1 - top/headerHeight*1))
+				})
+			}	
 		}
 	}
 	Hero.init()

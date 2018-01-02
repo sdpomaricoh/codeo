@@ -1,1 +1,46 @@
 {{!< default}}
+<main role="main">
+	{{> header }}
+	{{#post}}
+	<article class="singlePost {{post_class}}">
+		{{#if feature_image}}
+			<div class="postHeader" style="background-image: url('{{img_url feature_image}}')">
+				<div class="postInfo">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8 col-sm-12 col-xs-12">
+								<div class="tags">
+									{{tags separator=","}}
+								</div>
+								<h1>{{title}}</h1>
+							</div>
+							<div class="col-md-4 postMetadata">
+								<a href="javascript:void(0)" class="postMetaIcon" id="metadataIcon"><i class="ion-android-more-vertical"></i></a>
+								<div class="postMetaContainer">
+									<p>
+										<span>
+											publicado: <a href="{{url}}" class="date"><time datetime="{{date format="YYYY-MM-DDTHH:mm:ss.SS"}}">{{date published_at format="MMMM DD, YYYY"}}</time></a>
+										</span>
+										<span>
+											{{tags prefix="en: "}}
+										</span>
+										<span>
+											autor: {{author}} 
+										</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	  	{{/if}}
+		<div class="container postContent">
+			<div class="col-md-12">
+				{{content}}
+			</div>				
+		</div>
+	</article>
+	{{/post}}
+	{{> footer }}
+</main>	

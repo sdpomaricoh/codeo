@@ -69,13 +69,26 @@ const menuFullWidth = () => {
 			
 		},
 		scroll: function(scroll) {
-			const e = this.settings, height = $('#hero').height() - e.navigation.height()
-			if (scroll >= height) {
-				e.navigation.addClass('header-is-scroll')
-			} else {
-				e.navigation.removeClass('header-is-scroll')
+			const hero = $('#hero').length, postHeader = $('.postHeader').length
+			if (hero !== 0) {
+				const e = this.settings, height = $('#hero').height() - e.navigation.height()
+				if (scroll >= height) {
+					e.navigation.addClass('header-is-scroll')
+				} else {
+					e.navigation.removeClass('header-is-scroll')
+				}
+			} else if (postHeader !== 0) {
+				const e = this.settings, height = $('.postHeader').height() - $('header').height()
+				if (scroll >= height) {
+					e.navigation.addClass('header-is-scroll')
+					$('.logo-img > svg.is-post').addClass('is-logo-scroll')
+					$('.menuIcon-toggle.is-post').addClass('is-toggle-scroll')
+				} else {
+					e.navigation.removeClass('header-is-scroll')
+					$('.logo-img > svg.is-post').removeClass('is-logo-scroll')
+					$('.menuIcon-toggle.is-post').removeClass('is-toggle-scroll')
+				}
 			}
-			
 		}
 	}
 

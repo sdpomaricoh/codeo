@@ -39,3 +39,29 @@
 .no-padding{
     padding: 0 !important;
 }
+
+.postMetaIcon.icon-is-active{
+    transform: rotate(90deg);
+}
+.postMetaContainer.container-is-active{
+    bottom: 30% !important;
+    margin-bottom: 1.5rem;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.mainHeader{
+    .logo{
+        .logo-img{
+            svg.is-post.is-logo-scroll{
+                fill: black;
+            }
+        }
+    } 
+} 
+.menuIcon {
+    .menuIcon-toggle.is-post.is-toggle-scroll{
+        span{
+            background-color: black;
+        }
+    }
+}

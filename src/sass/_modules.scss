@@ -16,9 +16,15 @@
     	justify-content: flex-start;
     	.logo-img{
     		display: inline-block;
-    		img{
-    			max-height: 40px;
+            padding: 10px 0;
+    		svg{
+                display: inline-block;
+    			height: 20px;
+                transition: fill ease-in-out 500ms;
     		}
+            svg.is-post{
+                fill: $light-primary-color;
+            }
     	}
 	}
 	.menuIcon{
@@ -35,7 +41,7 @@
 		        height: 3px;
 		        position: absolute;
 		        top: 50%;
-		        transition: all ease 320ms;
+		        transition: all ease-in-out 500ms;
 		        width: 25px;
 		        &:nth-child(1){
 		            transform: translateY(-8px);
@@ -50,6 +56,11 @@
     			}
     		}
 		}
+        .menuIcon-toggle.is-post{
+            span{
+                background-color: $light-primary-color;
+            }
+        }
 	}
 }
 
@@ -436,5 +447,105 @@ footer{
                 text-transform: capitalize;
             }
         }
+    }
+}
+
+/*=========================================================
+                    Single Post
+=========================================================*/
+
+.singlePost{
+    .postHeader{
+        background-color: $highlight-color;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 540px;
+        position: relative;
+        &:after{
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 1) 100%);
+            content: "";
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+        .postInfo{
+            bottom: 5%;
+            position: absolute;
+            width: 100%;
+            h1{
+                color: $light-primary-color;
+                font-size: 2rem;
+            }
+            .tags{
+                text-align: left;
+                margin-bottom: 10px;
+                a{
+                    color: $light-primary-color;
+                    font-size: 10px;
+                    position: relative;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    &::after{
+                        background: #a9a9a9;
+                        bottom: -1px;
+                        content: "";
+                        height: 1px;
+                        left: 0;
+                        position: absolute;
+                        right: 2px;
+                    }
+                }
+            }
+            .postMetadata{
+                align-items: flex-end;
+                text-align: right;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                position: relative;
+                .postMetaIcon{
+                    margin-right: 15px;
+                    transition: all ease 320ms;
+                    i{
+                        color: $light-primary-color;
+                        font-size: 2.5rem;
+                    }
+                }
+                .postMetaContainer{
+                    bottom: -120px;
+                    color: white;
+                    margin-right: 15px;
+                    position: absolute;
+                    opacity: 0;
+                    right: 0;
+                    visibility: hidden;
+                    transition: all ease 320ms;
+                    width: 100%;
+                    p{
+                        line-height: 1.25rem;
+                        margin-bottom: 0;
+                        text-align: right;
+                        text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+                        span{
+                            display: block;
+                            text-transform: capitalize;
+                            a{
+                                color: $light-primary-color;
+                                text-transform: lowercase;
+                                &:hover{
+                                    color: $highlight-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .postContent{
+        background-color: $light-primary-color;
+        margin-top: 4rem;
+        padding: 2rem 0;
     }
 }
