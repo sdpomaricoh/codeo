@@ -547,5 +547,74 @@ footer{
         background-color: $light-primary-color;
         margin-top: 4rem;
         padding: 2rem 0;
+        padding-bottom: 0.1rem;
+    }
+    .socialSharingContainer{
+        align-items: center;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        &:before{
+            background-color: #eee;
+            content: '';
+            display: block;
+            height: 1px;
+            position: absolute;
+            top: 0;
+            width: 97.5%;
+        }
+        .sharingText{
+            p{
+                margin-bottom: 0;
+            }
+        }
+        .sharingIcons{
+            align-items: center;
+            display: flex;
+            padding-left: 0.5rem;
+            li{
+                display: inline-block;
+                list-style: none;
+                margin-left: 0.5rem;
+                margin-top: 1rem;
+                a{  
+                    background-color: $dark-primary-color;
+                    border-radius: 50%;
+                    color: $light-primary-color;
+                    display: inline-block;
+                    font-size: 18px;
+                    height: 30px;
+                    line-height: 18px;
+                    padding-bottom: 6px;
+                    padding-top: 6px;
+                    text-align: center;
+                    width: 30px;
+                    &:hover{
+                        background-color: $highlight-color;
+                    }
+                }
+                a.facebook{
+                    &:hover{
+                        background-color: $facebook;
+                    }
+                }
+                a.twitter{
+                    &:hover{
+                        background-color: $twitter;
+                    }
+                }
+                a.linkedin{
+                    &:hover{
+                        background-color: $linkedin;
+                    }
+                }
+                a.whatsapp{
+                    &:hover{
+                        background-color: $whatsapp;
+                    }
+                }                                
+            }
+        }
     }
 }
