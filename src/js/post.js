@@ -24,10 +24,24 @@ const Post = () => {
 				})
 			})
 		},
+		twitter: function() {
+			$(document).ready( function() {
+				const intent = 'https://twitter.com/intent/tweet'
+				const title = $('#twitterShare').data('title')
+				const href = $('#twitterShare').data('href')
+				console.log(href)
+				const text = encodeURI(title)
+				const url = intent+'?url='+href+'?text='+text+'&amp;via=codeoweb'	
+				$('#twitterShare').click(function(e) {
+					window.open(url, 'Twitter', 'height=320,width=420').focus()
+				})
+			})
+		},
 		init: function() {
 			this.metadataIcon()
 			this.shared()
 			this.facebook()
+			this.twitter()
 		}
 	}
 	post.init()
