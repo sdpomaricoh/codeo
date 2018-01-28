@@ -30,7 +30,7 @@ const Post = () => {
 				const title = $('#twitterShare').data('title')
 				const text = encodeURI(title)
 				const href = $('#twitterShare').data('href')
-				const url = intent+'?text='+text+'&url='+href+'&via=codeoweb'	
+				const url = intent+'text='+text+'&url='+href+'&via=codeoweb'	
 				$('#twitterShare').click(function(e) {
 					window.open(url, 'Twitter', 'height=360,width=480').focus()
 				})
