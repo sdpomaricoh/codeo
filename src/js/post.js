@@ -26,14 +26,13 @@ const Post = () => {
 		},
 		twitter: function() {
 			$(document).ready( function() {
-				const intent = 'https://twitter.com/intent/tweet'
+				const intent = 'https://twitter.com/intent/tweet?'
 				const title = $('#twitterShare').data('title')
-				const href = $('#twitterShare').data('href')
-				console.log(href)
 				const text = encodeURI(title)
-				const url = intent+'?url='+href+'?text='+text+'&amp;via=codeoweb'	
+				const href = $('#twitterShare').data('href')
+				const url = intent+'?text='+text+'&url='+href+'&via=codeoweb'	
 				$('#twitterShare').click(function(e) {
-					window.open(url, 'Twitter', 'height=320,width=420').focus()
+					window.open(url, 'Twitter', 'height=360,width=480').focus()
 				})
 			})
 		},

@@ -22,7 +22,11 @@
 	<meta property="og:title" content="{{meta_title}}" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="{{@blog.url}}{{url absolute="true"}}" />
-	{{#if @blog.cover_image}}<meta property="og:image" content="{{@blog.cover_image}}" />{{/if}}
+
+	{{#if @blog.cover_image}}
+		<meta property="og:image" content="{{@blog.cover_image}}" />
+	{{/if}}
+		
 	{{ghost_head}}
 </head>
 <body class="{{body_class}}">
