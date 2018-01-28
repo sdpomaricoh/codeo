@@ -55,16 +55,37 @@
 						</a>
 					</li>
 					<li>
-						<a href="javascript:void(0)" class="linkedin" data-href="{{url absolute='true'}}">
+						<a href="javascript:void(0)" class="linkedin" data-href="{{url absolute='true'}}" id="linkedinShare">
 							<i class="ion-social-linkedin"></i>
 						</a>
 					</li>
-					<li><a href="javascript:void(0)" class="whatsapp"><i class="ion-social-whatsapp"></i></a></li>
-					<li><a href="javascript:void(0)" class="more"><i class="ion-android-add"></i></a></li>
+					<li>
+						<a href="javascript:void(0)" class="whatsapp" data-title="{{title}}" data-href="{{url absolute='true'}}" id="whatsappShare">
+							<i class="ion-social-whatsapp"></i>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)" class="more" data-title="{{title}}" data-href="{{url absolute='true'}}" id="webShare">
+							<i class="ion-android-add"></i>
+						</a>
+					</li>
 				</ul>
 			</div>				
 		</div>
 	</article>
+	<div class="container" id="comment-box">
+		<div class="row">
+			<div id="disqus_thread"></div>
+		</div>	
+	</div>	
+	<script>
+		(function() {
+		var d = document, s = d.createElement('script');
+		s.src = 'https://mycvresumen.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+		})();
+	</script>
 	{{/post}}
 	{{> footer }}
 </main>	

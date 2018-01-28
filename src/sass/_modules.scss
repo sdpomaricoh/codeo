@@ -610,11 +610,26 @@ footer{
                     }
                 }
                 a.whatsapp{
+                    display: none;
                     &:hover{
                         background-color: $whatsapp;
                     }
+                }
+                a.more{
+                    display: none;
                 }                                
             }
         }
     }
+}
+
+#disqus_thread{
+    width: 100%;
+    a{
+        color: $highlight-color;
+    }
+}
+
+#comment-box{
+    margin-top: 5%;
 }

@@ -28,6 +28,9 @@
 			}
 		}
 	}
+	#disqus_thread{
+		padding: 1rem;
+	}
 }
 
 @include media-breakpoint-only(xs) {
@@ -40,6 +43,9 @@
 				padding: 0.1rem 0.5rem;
 			}
 		}
+	}
+	.whatsapp, .more{
+		display: block !important;
 	}
 	.menu{
 		.menu-footer{
