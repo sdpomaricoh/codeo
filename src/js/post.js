@@ -55,7 +55,7 @@ const Post = () => {
 		},
 		linkedin: function () {
 			$(document).ready( function() {
-				const intent = 'https://www.linkedin.com/shareArticle?mini=true&url'
+				const intent = 'https://www.linkedin.com/shareArticle?mini=true&url='
 				const title = $('#linkedinShare').data('title')
 				const text = encodeURI(title)
 				const href = $('#linkedinShare').data('href')
@@ -75,7 +75,38 @@ const Post = () => {
 				const url = intent+text+' - '+ href
 				whatsapp.attr('href', url)
 			})
-			
+		},
+		progress: function() {
+			$(document).ready( function() {
+
+				const progressBar = $('.progressBar')
+
+				const getValue = function() {
+        			return $(window).scrollTop()
+    			}
+
+    			const getMax = function() {
+        			return $(document).height() - $(window).height()
+    			}
+
+    			const getWidth = function() {
+    				const max = getMax()
+    				const value = getValue()
+    				const width = (value/max) * 100
+    				width = width + '%'
+            		return width
+    			}
+
+    			const setWidth = function() {
+            		progressBar.css({ width: getWidth() })
+        		}
+
+        		$(document).on('scroll', setWidth)
+        		$(window).on('resize', function() {
+        			max = getMax()
+            		setWidth()
+        		})
+			})
 		},
 		init: function() {
 			this.metadataIcon()
@@ -84,6 +115,7 @@ const Post = () => {
 			this.twitter()
 			this.linkedin()
 			this.whatsapp()
+			this.progress()
 		}
 	}
 	post.init()

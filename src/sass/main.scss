@@ -34,6 +34,11 @@
 }
 
 @include media-breakpoint-only(xs) {
+	.singlePost{
+		.postHeader{
+			height: 420px;
+		}
+	} 
 	footer{
 		text-align: center;
 		.footer-social{
