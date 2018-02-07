@@ -1,5 +1,3 @@
-const $ = require('jquery')
-
 const mainHero = () =>{
 	const Hero = {
 		init: function() {

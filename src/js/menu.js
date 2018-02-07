@@ -1,5 +1,3 @@
-const $ = require('jquery')
-
 const menuFullWidth = () => {
 	const Menu = {
 		settings: {

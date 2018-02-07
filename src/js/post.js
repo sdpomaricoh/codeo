@@ -1,4 +1,3 @@
-const $ = require('jquery')
 
 const Post = () => {
 	const post = {
@@ -92,7 +91,7 @@ const Post = () => {
     			const getWidth = function() {
     				const max = getMax()
     				const value = getValue()
-    				const width = (value/max) * 100
+    				let width = (value/max) * 100
     				width = width + '%'
             		return width
     			}
@@ -101,9 +100,16 @@ const Post = () => {
             		progressBar.css({ width: getWidth() })
         		}
 
-        		$(document).on('scroll', setWidth)
+        		$(document).on('scroll', function() {
+        			const isScroll = $('header').hasClass('header-is-scroll')
+        			if (isScroll)
+        				progressBar.css('opacity', 1)
+        			else
+        				progressBar.css('opacity', 0)
+        			setWidth()
+        		})
+        		
         		$(window).on('resize', function() {
-        			max = getMax()
             		setWidth()
         		})
 			})
