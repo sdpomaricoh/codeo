@@ -1862,6 +1862,8 @@ footer .footer-social {
     padding: 1rem; }
   #disqus_thread {
     padding: 1rem; }
+  .singlePost .postHeader .postInfo h1 {
+    font-size: 1.5rem; }
   .singlePost .postContent {
     display: flex;
     flex-direction: column-reverse; }
@@ -1882,8 +1884,18 @@ footer .footer-social {
         display: inline-block;
         margin-bottom: 0;
         width: 16%; }
-  .author .authorDescription {
-    width: 90%; } }
+  .author {
+    padding-bottom: 0; }
+    .author .authorDescription {
+      width: 90%; }
+    .author .authorLocation {
+      padding-left: 0; }
+      .author .authorLocation li, .author .authorLocation a {
+        margin-right: 0; }
+        .author .authorLocation li:first-child, .author .authorLocation a:first-child {
+          margin-right: 10px; }
+    .author .authorSocial {
+      padding-left: 0; } }
 
 @media (min-width: 576px) and (max-width: 767px) {
   .singlePost .postHeader .postInfo h1 {
