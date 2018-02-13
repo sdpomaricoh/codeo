@@ -1,14 +1,11 @@
 const Menu = require('./menu')
 const Hero = require('./hero')
-const Game = require('./game')
 const Dates = require('./date')
 const Post = require('./post')
-const $ = require('jquery')
 
-$(document).ready(() => {
+$(document).ready(function() {
 	Menu()
 	Hero()
-	Game()
 	Dates()
 	Post()
 })

@@ -1,1 +1,102 @@
+@media (max-width: 1024px){
+	.feed{
+		.single, .single:nth-child(4){
+			flex: 0 0 100%;
+			margin-bottom: 5%;
+			padding: 1rem;
+			.date{
+				text-align: center;
+			}
+		}
+		.single{
+			&:first-child{
+				padding: 1rem;
+			}
+		}
+	}
+	#disqus_thread{
+		padding: 1rem;
+	}
+	.singlePost{
+		.postContent{
+			display: flex;
+			flex-direction: column-reverse;	
+			.socialSharing{
+				align-items: center;
+				display: flex;
+				flex-wrap: wrap;
+				float: none;
+				height: 50px;
+				margin-left: 0;
+				width: 100%;
+				span{
+					display: inline-block;
+					font-size: 0.8rem;
+					text-align: right;
+					width: 20%;
+				}
+				a, a.whatsapp, a.more{
+					display: inline-block;
+					margin-bottom: 0;
+					width: 16%;
+				}
+			}
+		}
+	}
+	.author{
+		.authorDescription{ width: 90%; }
+	} 
+}
 
+@include media-breakpoint-only(sm){
+	.singlePost{
+		.postHeader{
+			.postInfo{
+				h1{
+					font-size: 1.75rem;
+				}
+			}
+		} 
+	}
+}
+
+@include media-breakpoint-only(xs) {
+	.singlePost{
+		.postHeader{
+			height: 420px;
+		}
+	} 
+	footer{
+		text-align: center;
+		.footer-social{
+			margin-top: 1rem;
+			text-align: center;
+			li{
+				padding: 0.1rem 0.5rem;
+			}
+		}
+	}
+	.menu{
+		.menu-footer{
+			bottom: 5%;
+			.copyright{
+				padding-bottom: 0;
+				text-align: center;
+			}
+			.social{
+				padding: 0.75rem 0;
+				text-align: center;
+				ul{
+					display: flex;
+					padding-left:0;
+					li{
+						width: 24%;
+					}
+				}
+			}
+		}
+	}
+	.postMetadata{
+		display: none !important;
+	}
+}

@@ -8,13 +8,13 @@
 				<div class="postInfo">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-8 col-sm-12 col-xs-12">
+							<div class="col-md-8 col-sm-8 col-xs-12">
 								<div class="tags">
 									{{tags separator=","}}
 								</div>
 								<h1>{{title}}</h1>
 							</div>
-							<div class="col-md-4 postMetadata">
+							<div class="col-md-4 col-sm-4 postMetadata">
 								<a href="javascript:void(0)" class="postMetaIcon" id="metadataIcon"><i class="ion-android-more-vertical"></i></a>
 								<div class="postMetaContainer">
 									<p>
@@ -36,46 +36,34 @@
 			</div>
 	  	{{/if}}
 		<div class="container postContent">
-			<div class="col-md-12">
-				{{content}}
+			<div class="socialSharing">
+				<span>Compartir</span>
+				<a href="javascript:void(0)" class="facebook" data-href="{{url absolute='true'}}" id="facebookShare">	<i class="ion-social-facebook"></i>
+				</a>
+				<a href="javascript:void(0)" class="twitter" data-title="{{title}}" data-href="{{url absolute='true'}}" id="twitterShare">
+					<i class="ion-social-twitter"></i>
+				</a>
+				<a href="javascript:void(0)" class="linkedin" data-href="{{url absolute='true'}}" id="linkedinShare">
+					<i class="ion-social-linkedin"></i>
+				</a>
+				<a href="javascript:void(0)" class="whatsapp" data-title="{{title}}" data-href="{{url absolute='true'}}" id="whatsappShare">
+					<i class="ion-social-whatsapp"></i>
+				</a>
+				<a href="javascript:void(0)" class="more" data-title="{{title}}" data-href="{{url absolute='true'}}" id="webShare">
+					<i class="ion-plus-circled"></i>
+				</a>
 			</div>
-			<div class="col-md-12 socialSharingContainer">
-				<div class="sharingText">
-					<p>Compartir: </p>
-				</div>
-				<ul class="sharingIcons">
-					<li>
-						<a href="javascript:void(0)" class="facebook" data-href="{{url absolute='true'}}" id="facebookShare">
-							<i class="ion-social-facebook"></i>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:void(0)" class="twitter" data-title="{{title}}" data-href="{{url absolute='true'}}" id="twitterShare">
-							<i class="ion-social-twitter"></i>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:void(0)" class="linkedin" data-href="{{url absolute='true'}}" id="linkedinShare">
-							<i class="ion-social-linkedin"></i>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:void(0)" class="whatsapp" data-title="{{title}}" data-href="{{url absolute='true'}}" id="whatsappShare">
-							<i class="ion-social-whatsapp"></i>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:void(0)" class="more" data-title="{{title}}" data-href="{{url absolute='true'}}" id="webShare">
-							<i class="ion-android-add"></i>
-						</a>
-					</li>
-				</ul>
-			</div>				
+			<div class="col-md-10 offset-md-1 col-sm-12 offset-sm-1" id="content">
+				{{content}}
+			</div>		
 		</div>
 	</article>
+	{{> author}}
 	<div class="container" id="comment-box">
 		<div class="row">
-			<div id="disqus_thread"></div>
+			<div class="col-md-10 offset-md-1 col-ms-12">
+				<div id="disqus_thread"></div>
+			</div>
 		</div>	
 	</div>	
 	<script>

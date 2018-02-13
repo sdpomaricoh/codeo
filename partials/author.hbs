@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-10 offset-md-1">
+			{{#author}}
+			<div class="author">
+				<img src="{{profile_image}}" alt="{{name}}" class="authorPhoto" />
+				<a href="{{url}}"><h4 class="authorName">{{name}}</h4></a>
+				{{#if bio}}
+				<p class="authorDescription">{{bio}}</p>
+				{{/if}}
+				<ul class="authorLocation">
+					{{#if location}}
+					<li><i class="ion-location"></i> {{location}}</li>
+					{{/if}}
+					{{#if website}}
+					<li><a href="{{website}}"><i class="ion-earth"></i> {{website}}</a></li>
+					{{/if}}
+				</ul>
+				<ul class="authorSocial">
+					{{#if facebook}}
+					<li><a href="https://www.facebook.com/{{facebook}}" target="_blank" class="facebook"><i class="ion-social-facebook"></i></a></li>
+					{{/if}}
+					{{#if twitter}}
+					<li><a href="https://www.twitter.com/{{twitter}}" target="_blank" class="twitter"><i class="ion-social-twitter"></i></a></li>
+					{{/if}}
+				</ul>
+			</div>
+			{{/author}}
+		</div>		
+	</div>
+</div>
