@@ -114,6 +114,31 @@ const Post = () => {
         		})
 			})
 		},
+		map: function() {
+			$(document).ready( function() {
+				if (window.google) {			
+					const myOptions = {
+		            	zoom: 16,
+		            	center: new google.maps.LatLng(6.208892, -75.5776498), //change the coordinates
+		            	mapTypeId: 'roadmap',
+		            	scrollwheel: false,
+		            	mapTypeControl: true
+					}
+					const map = new google.maps.Map(document.getElementById('map'), myOptions)
+					const marker = new google.maps.Marker({
+		            	map: map,
+		            	position: new google.maps.LatLng(6.20878,-75.5799565) 
+					})
+					const infowindow = new google.maps.InfoWindow({
+		            	content: '<b>Vivero del software </b><br/> Medellín, Antioquia'  
+					})
+					google.maps.event.addListener(marker, 'click', function () {
+		            	infowindow.open(map, marker)
+		        	})
+					infowindow.open(map, marker)
+				}
+			})
+		},
 		init: function() {
 			this.metadataIcon()
 			this.shared()
@@ -122,6 +147,7 @@ const Post = () => {
 			this.linkedin()
 			this.whatsapp()
 			this.progress()
+			this.map()
 		}
 	}
 	post.init()

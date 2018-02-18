@@ -1,0 +1,16 @@
+{{!< default}}
+<main role="main">
+	{{> header }}
+		{{#post}}
+		<article class="singlePost {{post_class}}">
+			<div class="postHeader" id="map"></div>
+			<h2>Hablemos</h2>
+			<p class="contact-invitation">Cuéntame sobre tus ideas de proyecto o solo saludame</p>
+			<div class="col-md-8 offset-md-2 col-sm-12 offset-sm-1" id="content">
+				{{content}}
+			</div>
+		</article>		
+		{{/post}}	
+	{{> footer }}
+	<script src="https://maps.google.com/maps/api/js?key=AIzaSyCXqjlt-8NnmzfTL7ghKn747dl5ww2SptM "></script>
+</main>	
