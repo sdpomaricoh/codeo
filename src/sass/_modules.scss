@@ -746,10 +746,16 @@ footer{
     }
 }
 
-.page-contacto{
+/*=========================================================
+                        Page
+=========================================================*/
+
+.page-template{
     .progressContainer{
         display: none;
     }
+}
+.page-contacto{
     .postHeader{
         margin-bottom: 5rem;
     }
