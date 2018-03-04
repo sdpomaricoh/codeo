@@ -4,10 +4,22 @@
 		{{#post}}
 		<article class="singlePost {{post_class}}">
 			<div class="postHeader" id="map"></div>
-			<h2>Hablemos</h2>
-			<p class="contact-invitation">Cuéntame sobre tus ideas de proyecto o solo saludame</p>
-			<div class="col-md-8 offset-md-2 col-sm-12 offset-sm-1" id="content">
-				{{content}}
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 offset-md-1 col-sm-12">
+						<h2>Hablemos</h2>
+						<p class="contact-invitation">
+							Para proyectos, ideas, colaboraciones o cualquier otra cosa, no dude en ponerte en contacto conmigo.
+						</p>
+						<h3><i class="ion-ios-chatbubble"></i> Email</h3>
+						<a href="mailto:sergio@codeo.co" class="email">sergio@codeo.co</a>
+						<h3><i class="ion-ios-telephone"></i> Teléfono</h3>
+						<a href="tel:573015660438" class="phone">(+57) 301 566 0438</a>
+					</div>
+					<div class="col-md-5 col-sm-12" id="content">
+						{{content}}
+					</div>	
+				</div>
 			</div>
 		</article>		
 		{{/post}}	
