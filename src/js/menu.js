@@ -67,7 +67,7 @@ const menuFullWidth = () => {
 			
 		},
 		scroll: function(scroll) {
-			const hero = $('#hero').length, postHeader = $('.postHeader').length
+			const hero = $('#hero').length, postHeader = $('.postHeader').length, authorHeader = $('.authorHeader').length
 			if (hero !== 0) {
 				const e = this.settings, height = $('#hero').height() - e.navigation.height()
 				if (scroll >= height) {
@@ -86,7 +86,14 @@ const menuFullWidth = () => {
 					$('.logo-img > svg.is-post').removeClass('is-logo-scroll')
 					$('.menuIcon-toggle.is-post').removeClass('is-toggle-scroll')
 				}
-			}
+			}else if(authorHeader !== 0) {
+				const e = this.settings, height = $('.authorHeader').height() - e.navigation.height()
+				if (scroll >= height) {
+					e.navigation.addClass('header-is-scroll')
+				} else {
+					e.navigation.removeClass('header-is-scroll')
+				}
+			}  
 		}
 	}
 

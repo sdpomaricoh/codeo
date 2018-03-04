@@ -1,4 +1,14 @@
 @media (max-width: 1024px){
+	.authorHeader{
+		.authorInfo{
+			padding: 1rem;
+			width: 100%;
+			.authorPhoto{
+				height: 100px;
+				width: 100px;
+			}
+		}
+	}
 	.feed{
 		.single, .single:nth-child(4){
 			flex: 0 0 100%;

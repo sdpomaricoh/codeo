@@ -1,0 +1,23 @@
+{{!< default}}
+<main role="main">
+	{{> header }}
+	<div class="authorHeader">
+		<div class="authorInfo">
+		{{#author}}
+			<img src="{{profile_image}}" alt="{{name}}" class="authorPhoto" />
+			<h4 class="authorName">{{name}}</h4>
+			{{#if bio}}
+			<p class="authorDescription">{{bio}}</p>
+			{{/if}}
+		{{/author}}
+		</div>
+	</div>
+	<div class="container">
+		<section class="feed">
+			{{#foreach posts}}
+				{{> post }}
+			{{/foreach}}
+		</section>
+	</div>
+	{{> footer }}
+</main>	
