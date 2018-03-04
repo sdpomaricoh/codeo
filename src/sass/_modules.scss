@@ -211,39 +211,6 @@
     background-size: cover;
     margin-bottom: 5%;
     position: relative;
-    .youtube{
-        overflow: hidden;
-        height: 100%;
-        width: 100%;
-        z-index: -99;
-        #youtube--bufferingBg{
-            position: absolute;
-            width: 100%;
-            top: 0;
-            bottom: 0;
-            z-index: 1;
-            height: 100%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        #youtube--iframe-wrapper{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            position: absolute;
-            height: 100%;
-            overflow: hidden;
-            .iframe{
-                position: absolute;
-                pointer-events: none;
-                margin: 0 auto;
-                height: 300vh; 
-                width: 120vw;
-            }
-        }
-    }
 }
 
 /*=========================================================
