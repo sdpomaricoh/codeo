@@ -1,8 +1,8 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const webpack = require('webpack');
-const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const webpack = require('webpack')
+const path = require('path')
 
-isProduction = (process.env.NODE_ENV === 'production');
+isProduction = (process.env.NODE_ENV === 'production')
 
 module.exports = {
 	entry: [
@@ -11,7 +11,7 @@ module.exports = {
 	],
 	output: {
 		path: path.resolve(__dirname, './assets'),
-		filename: 'js/main.bundle.min.js',
+		filename: 'js/main.bundle.min.js'
 	},
 	module: {
 		rules: [
@@ -52,9 +52,9 @@ module.exports = {
 			minimize: isProduction
 		})
 	]
-};
+}
 
-if(isProduction){
+if (isProduction) {
 	module.exports.plugins.push(
 		new webpack.optimize.UglifyJsPlugin()
 	)

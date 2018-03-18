@@ -207,6 +207,7 @@
 
 #hero{
     background-attachment: fixed;
+    background-image: linear-gradient(135deg, rgba(111,226,158,0.8) 0%,rgba(91,218,209,0.8) 100%);;
     background-position: center center;
     background-size: cover;
     margin-bottom: 5%;
@@ -263,6 +264,7 @@ footer{
 .feed{
     display: flex;
     flex-wrap: wrap;
+    margin-top: 12%;
     position: relative;
     .single{
         flex: 0 0 25%;

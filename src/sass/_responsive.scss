@@ -10,17 +10,20 @@
 		}
 	}
 	.feed{
+		margin-top: 33%;
 		.single, .single:nth-child(4){
 			flex: 0 0 100%;
 			margin-bottom: 5%;
-			padding: 1rem;
+			padding: 0;
 			.date{
 				text-align: center;
 			}
 		}
 		.single{
 			&:first-child{
-				padding: 1rem;
+				padding: 0;
+				margin-bottom: 5%;
+				max-height: 350px;
 			}
 		}
 	}
@@ -93,7 +96,7 @@
 @include media-breakpoint-only(xs) {
 	.singlePost{
 		.postHeader{
-			height: 420px;
+			height: 360px;
 		}
 	} 
 	footer{

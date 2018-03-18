@@ -10,6 +10,7 @@ const menuFullWidth = () => {
 		},
 		bindUIActions: function() {
 			const e = this.settings
+			Menu.home()
 			e.closebtn.click(()=>{
 				Menu.close()
 			})
@@ -44,6 +45,11 @@ const menuFullWidth = () => {
 				setTimeout(hidden, 1200)
 			}
 		},
+		home: function() {
+			const route = window.location.pathname
+			const e = this.settings
+			if (route === '/') e.navigation.addClass('header-is-scroll')
+		},
 		open: function() {
 			const e = this.settings
 			function show() {
@@ -67,15 +73,9 @@ const menuFullWidth = () => {
 			
 		},
 		scroll: function(scroll) {
-			const hero = $('#hero').length, postHeader = $('.postHeader').length, authorHeader = $('.authorHeader').length
-			if (hero !== 0) {
-				const e = this.settings, height = $('#hero').height() - e.navigation.height()
-				if (scroll >= height) {
-					e.navigation.addClass('header-is-scroll')
-				} else {
-					e.navigation.removeClass('header-is-scroll')
-				}
-			} else if (postHeader !== 0) {
+			const postHeader = $('.postHeader').length, authorHeader = $('.authorHeader').length
+			
+			if (postHeader !== 0) {
 				const e = this.settings, height = $('.postHeader').height() - $('header').height()
 				if (scroll >= height) {
 					e.navigation.addClass('header-is-scroll')
@@ -86,7 +86,7 @@ const menuFullWidth = () => {
 					$('.logo-img > svg.is-post').removeClass('is-logo-scroll')
 					$('.menuIcon-toggle.is-post').removeClass('is-toggle-scroll')
 				}
-			}else if(authorHeader !== 0) {
+			} else if (authorHeader !== 0 ) {
 				const e = this.settings, height = $('.authorHeader').height() - e.navigation.height()
 				if (scroll >= height) {
 					e.navigation.addClass('header-is-scroll')

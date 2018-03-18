@@ -1538,6 +1538,7 @@ footer {
 
 #hero {
   background-attachment: fixed;
+  background-image: linear-gradient(135deg, rgba(111, 226, 158, 0.8) 0%, rgba(91, 218, 209, 0.8) 100%);
   background-position: center center;
   background-size: cover;
   margin-bottom: 5%;
@@ -1585,6 +1586,7 @@ footer .footer-social {
 .feed {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 12%;
   position: relative; }
   .feed .single {
     flex: 0 0 25%;
@@ -2060,14 +2062,18 @@ footer .footer-social {
     .authorHeader .authorInfo .authorPhoto {
       height: 100px;
       width: 100px; }
-  .feed .single, .feed .single:nth-child(4) {
-    flex: 0 0 100%;
-    margin-bottom: 5%;
-    padding: 1rem; }
-    .feed .single .date, .feed .single:nth-child(4) .date {
-      text-align: center; }
-  .feed .single:first-child {
-    padding: 1rem; }
+  .feed {
+    margin-top: 33%; }
+    .feed .single, .feed .single:nth-child(4) {
+      flex: 0 0 100%;
+      margin-bottom: 5%;
+      padding: 0; }
+      .feed .single .date, .feed .single:nth-child(4) .date {
+        text-align: center; }
+    .feed .single:first-child {
+      padding: 0;
+      margin-bottom: 5%;
+      max-height: 350px; }
   #disqus_thread {
     padding: 1rem; }
   .singlePost .postHeader .postInfo h1 {
@@ -2111,7 +2117,7 @@ footer .footer-social {
 
 @media (max-width: 575px) {
   .singlePost .postHeader {
-    height: 420px; }
+    height: 360px; }
   footer {
     text-align: center; }
     footer .footer-social {
