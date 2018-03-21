@@ -15,15 +15,35 @@
 	<link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 	<link rel="prefetch" href="{{@blog.url}}">
 	
-	<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Lato|Oswald|Montserrat"> 
-	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/themes/prism.min.css" r/>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Oswald|Montserrat"> 
+	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/themes/prism.min.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/themes/prism-okaidia.min.css">  
 	<link rel="stylesheet" href="{{asset "css/main.css"}}" />
+
+	<link rel="icon" type="image/png" sizes="16x16" href="{{asset 'img/icon_16x16.png'}}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{asset 'img/icon_32x32.png'}}">
+	<link rel="icon" type="image/png" sizes="64x64" href="{{asset 'img/icon_64x64.png' }}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{asset 'img/icon_96x96.png' }}">
+	<link rel="icon" type="image/png" sizes="128x128" href="{{asset 'img/icon_128x128.png'}}">
+	<link rel="icon" type="image/png" sizes="192x192" href="{{asset 'img/icon_192x192.png'}}">
+	<link rel="icon" type="image/png" sizes="256x256" href="{{asset 'img/icon_256x256.png' }}">
+	<link rel="icon" type="image/png" sizes="384x384" href="{{asset 'img/icon_384x384.png' }}">
+	<link rel="icon" type="image/png" sizes="512x512" href="{{asset 'img/icon_512x512.png' }}">
+	<link rel="icon" type="image/png" sizes="1024x1024" href="{{asset 'img/icon_1024x1024.png' }}">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#34d5cb">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-title" content="codeo">
+	<link rel="apple-touch-icon" sizes="192x192" href="{{asset 'img/icon_192x192.png'}}">
 
 	<meta property="og:title" content="{{meta_title}}" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="{{@blog.url}}{{url absolute="true"}}" />
+
+	<link rel="manifest" href="manifest.json">
+	<meta name="theme-color" content="#34d5cb">
 
 	{{#if @blog.cover_image}}
 		<meta property="og:image" content="{{@blog.cover_image}}" />

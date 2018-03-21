@@ -10,5 +10,6 @@ $(document).ready(function() {
 	Menu()
 	Dates()
 	Post()
+	register()
 })
 
