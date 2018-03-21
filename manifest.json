@@ -3,7 +3,7 @@
 	"short_name": "codeo",
 	"description": "Tutoriales sobre programación web con JavaScript: HTML5/CSS3, React.js, Node.js, Angular y mucho más",
 	"background_color": "#f5f5f5",
-	"theme_color": "#34d5cb",
+	"theme_color": "#6FE29E",
 	"orientation": "portrait",
 	"display": "minimal-ui",
 	"start_url": "./?utm=homescreen",
