@@ -21,9 +21,10 @@
 		}
 		.single{
 			&:first-child{
-				padding: 0;
 				margin-bottom: 5%;
 				max-height: 350px;
+				padding: 0;
+				padding-bottom: 1rem;
 			}
 		}
 	}

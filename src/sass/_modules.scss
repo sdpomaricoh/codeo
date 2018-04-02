@@ -27,7 +27,35 @@
     	}
 	}
 	.menuIcon{
+        align-items: center;
 		justify-content: flex-end;
+        #notification{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 1.5rem;
+            height: 36px;
+            margin-right: 2rem;
+            opacity: 0;
+            outline: none;
+            padding: 0;
+            transition: all 0.320s ease 0s;
+            width: 25px;
+            &.active{
+                opacity: 1;
+            }
+            &:disabled{
+                color: rgba(0,0,0,0.2);
+                transform: scale(1);
+            }
+            &:not([disabled]){
+                color: rgba(0,0,0,1);
+            }
+            &:hover:not([disabled]){
+                transform: scale(1.1)
+            }
+        }
 		.menuIcon-toggle{
 		    cursor: pointer;
 		    display: inline-block;

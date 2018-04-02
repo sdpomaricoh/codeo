@@ -9,6 +9,7 @@
 	"start_url": "./?utm=homescreen",
 	"scope": "./",
 	"lang": "es-CO",
+	"gcm_sender_id": "103953800507",
 	 "icons": [
 		{
 		  "src": "./assets/img/icon_1024x1024.png",
