@@ -102,11 +102,16 @@
 	} 
 	footer{
 		text-align: center;
+		margin-top: 2rem;
 		.footer-social{
+			display: flex;
 			margin-top: 1rem;
 			text-align: center;
 			li{
-				padding: 0.1rem 0.5rem;
+				font-size: 11px;
+				padding: 0;
+				text-align: center;
+				width: 25%;
 			}
 		}
 	}

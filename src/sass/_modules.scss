@@ -314,7 +314,7 @@ footer{
                     font-size: 1.75rem;
                 	a { 
                 		color: $light-primary-color;
-                        text-shadow: 0 2px 2px rgba(0,0,0,0.14);
+                        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
                 	}
                 }
                 .post-excerpt{
@@ -323,12 +323,13 @@ footer{
                     p{
                         line-height: 1.2rem;
                         text-align: center;
-                        text-shadow: 0 2px 2px rgba(0,0,0,0.14);
+                        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
                     }
                 }
                 .tags{
                     a{
                         color: $light-primary-color;
+                        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
                         &:after{
                             background-color: $light-primary-color;
                         }
@@ -771,9 +772,17 @@ footer{
                         Page
 =========================================================*/
 
+.numeration-indent {
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
 .page-template{
     .progressContainer{
         display: none;
+    }
+    ol{
+        font-weight: bold;
     }
 }
 .page-contacto{
